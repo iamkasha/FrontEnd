@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CIS TECH</title>
+    <style>
+      .headers {
+        text-align: center;
+        text-emphasis: none;
+      }
+
+      .image_style {
+        border-radius: 50%;
+      }
+
+      .details {
+        text-align: justify;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="headers">My Profile</h1>
+    <img
+      src="/Users/rajkumarkashaicloud.com/Documents/UDAY/Java Script/Assignments/OPT_Uday.png"
+      ,
+      height="250px"
+      ,
+      width="250px"
+      ,
+      class="image_style"
+    />
+    <div class="details">
+      <p>Name = Uday Kumar Kasha</p>
+      <p>Course = Java Full Stack</p>
+      <p>University = Florida State University</p>
+    </div>
+
+    <script>
+      var my_Profile = {
+        firstName: "Uday Kumar",
+        lastName: "Kasha",
+        DOB: "06-01-1998",
+        university: "Florida State University",
+        height: "5.9",
+        Gender: "Male",
+        Race: "Asian",
+        Hobbies: {
+          watching_sports: "Football, Cricket",
+          playing: "Cricket, Badminton",
+        },
+        Citizenship: "India",
+        Visa_Status: "OPT",
+      };
+
+      console.log(my_Profile.Hobbies.playing);
+    </script>
+  </body>
+</html>
