@@ -1,0 +1,14 @@
+if('') --> true
+if([]) --> true
+if(0) -> false, if(1) -> true
+for every iteration, the scope doesn't remain the same
+?? to check if the variable is null or undefined
+
+Assignemnt Day3
+
+Declare a variable as 'environment' with a value
+Based on the environment, chage the sending amount,
+for dev environment, it should be adding 10%, test 20, stage 30, prod 5%
+And display sending amount 
+
+Try it with all the scenarios
