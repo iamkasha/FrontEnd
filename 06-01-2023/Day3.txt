@@ -7,7 +7,7 @@ for every iteration, the scope doesn't remain the same
 Assignemnt Day3
 
 Declare a variable as 'environment' with a value
-Based on the environment, chage the sending amount,
+Based on the environment, change the sending amount,
 for dev environment, it should be adding 10%, test 20, stage 30, prod 5%
 And display sending amount 
 
