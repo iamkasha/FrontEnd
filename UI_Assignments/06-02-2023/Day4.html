@@ -23,24 +23,28 @@
       </li>
     </ul>
     <script>
-      let hobbies = ["Cricket", "Play station"];
+      let hobbies = ["Cricket", "Play Station"];
       function getHobbies() {
         return hobbies;
       }
 
-      function addHobbies(a) {
-        return hobbies.push(a);
+      function addHobbies(newHobbies) {
+        hobbies.push(newHobbies);
       }
 
-      function deleteHobbies() {
-        return hobbies.pop();
+      function deleteHobbies(delHobby) {
+        const index = hobbies.indexOf(delHobby);
+        if (index > -1) {
+          hobbies.splice(index, 1);
+        }
       }
 
       //   console.log(getHobbies());
-      console.log(addHobbies("Badminton"));
+      addHobbies("Badminton");
       console.log(getHobbies());
 
-      console.log(deleteHobbies());
+      deleteHobbies("Cricket");
+      console.log(getHobbies());
     </script>
   </body>
 </html>
