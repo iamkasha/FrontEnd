@@ -37,7 +37,7 @@
       let env = prompt("Please enter an environment");
       let amount = 100;
       let sendAmount;
-      console.log("Scenario 1");
+      console.log("Scenario 1 using switch statement");
       switch (env) {
         case "dev":
           sendAmount = amount + amount * 0.1;
@@ -61,7 +61,7 @@
       }
 
       // SCENARIO 2
-      console.log("Scenario 2");
+      console.log("Scenario 2 using if else");
       if (env == "dev") {
         sendAmount = amount + amount * 0.1;
         console.log(sendAmount);
@@ -79,6 +79,19 @@
       }
 
       // SCENARIO 3
+      console.log("Scenario 3 using ternary ");
+      sendAmount =
+        env === "dev"
+          ? amount + amount * 0.1
+          : env === "test"
+          ? amount + amount * 0.2
+          : env === "stage"
+          ? amount + amount * 0.3
+          : env === "prod"
+          ? amount + amount * 0.05
+          : "Please enter valid environment";
+
+      console.log(sendAmount);
     </script>
   </body>
 </html>
