@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI Day-4</title>
+  </head>
+  <body>
+    <h1><b>FUNCTIONS IN JAVASCRIPT</b></h1>
+    <ul>
+      <li>
+        Assignment: write a function to return all your hobbies in an array to
+        console or on page.
+      </li>
+      <li>
+        And write a function to add a new hobbies to the existing list of
+        hobbies.
+      </li>
+      <li>
+        And create a function to delete the specific hobby that I pass from a
+        list.
+      </li>
+    </ul>
+    <script>
+      let hobbies = ["Cricket", "Play station"];
+      function getHobbies() {
+        return hobbies;
+      }
+
+      function addHobbies(a) {
+        return hobbies.push(a);
+      }
+
+      function deleteHobbies() {
+        return hobbies.pop();
+      }
+
+      //   console.log(getHobbies());
+      console.log(addHobbies("Badminton"));
+      console.log(getHobbies());
+
+      console.log(deleteHobbies());
+    </script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+Functions - First class citizens of JS
+-> IIFE
+-> this key word used to keep a context of a Function
+-> function(a, b?){} optional parameters
+-> Spread operator
+-> 
