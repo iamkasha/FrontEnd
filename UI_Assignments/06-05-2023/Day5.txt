@@ -1,0 +1,7 @@
+DOM -> Document Object Model
+It's like a tab on a browser
+Form fields and input fields
+innerHTML
+
+Assignment: display input fields for all your profile information 
+FN, LN, DOB, email , phone number etc with submit button , on click of submit display all values in Dom

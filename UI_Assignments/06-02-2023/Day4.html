@@ -4,47 +4,86 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UI Day-4</title>
+    <title>JAVA FULL STACK</title>
+    <style>
+      .headers {
+        text-align: center;
+        text-emphasis: none;
+      }
+
+      .image_style {
+        border-radius: 50%;
+      }
+
+      .details {
+        text-align: justify;
+        font-style: italic;
+      }
+    </style>
   </head>
   <body>
-    <h1><b>FUNCTIONS IN JAVASCRIPT</b></h1>
-    <ul>
-      <li>
-        Assignment: write a function to return all your hobbies in an array to
-        console or on page.
-      </li>
-      <li>
-        And write a function to add a new hobbies to the existing list of
-        hobbies.
-      </li>
-      <li>
-        And create a function to delete the specific hobby that I pass from a
-        list.
-      </li>
-    </ul>
+    <h1 class="headers">My Profile</h1>
+    <img
+      src="/Users/rajkumarkashaicloud.com/Documents/UDAY/Java Script/Assignments/UI_Assignments/06-02-2023/OPT_Uday.png"
+      ,
+      height="250px"
+      ,
+      width="250px"
+      ,
+      class="image_style"
+    />
+    <div class="details">
+      <p>Name = Uday Kumar Kasha</p>
+      <p>Course = Java Full Stack</p>
+      <p>University = Florida State University</p>
+    </div>
+    <button id="add_button" , name="submit">Add Hobbies</button>
+    <button id="show_button" , name="submit">Show Hobbies</button>
+    <button id="delete_button" , name="submit">Delete Hobbies</button>
+
     <script>
-      let hobbies = ["Cricket", "Play Station"];
-      function getHobbies() {
-        return hobbies;
-      }
+      var my_Profile = {
+        firstName: "Uday Kumar",
+        lastName: "Kasha",
+        DOB: "06-01-1998",
+        university: "Florida State University",
+        height: "5.9",
+        Gender: "Male",
+        Race: "Asian",
+        Hobbies: ["Cricket", "Play Station", "Table Tennis"],
+        Citizenship: "India",
+        Visa_Status: "OPT",
+        getHobbies: function () {
+          return my_Profile.Hobbies;
+        },
 
-      function addHobbies(newHobbies) {
-        hobbies.push(newHobbies);
-      }
+        addHobbies: function (newHobbies) {
+          let hobby = newHobbies;
+          my_Profile.Hobbies.push(hobby);
+        },
 
-      function deleteHobbies(delHobby) {
-        const index = hobbies.indexOf(delHobby);
-        if (index > -1) {
-          hobbies.splice(index, 1);
-        }
-      }
+        deleteHobbies: function (delHobby) {
+          const index = my_Profile.Hobbies.indexOf(delHobby);
+          if (index > -1) {
+            my_Profile.Hobbies.splice(index, 1);
+          }
+        },
+      };
 
-      //   console.log(getHobbies());
-      addHobbies("Badminton");
-      console.log(getHobbies());
+      console.log(my_Profile.getHobbies());
 
-      deleteHobbies("Cricket");
-      console.log(getHobbies());
+      my_Profile.addHobbies("Badminton");
+      console.log(my_Profile.getHobbies());
+
+      my_Profile.deleteHobbies("Cricket");
+      console.log(my_Profile.getHobbies());
+      // document
+      //   .getElementById("show_button")
+      //   .addEventListener("click", getHobbies());
+
+      // document
+      //   .getElementById("add_button")
+      //   .addEventListener("click", addHobbies());
     </script>
   </body>
 </html>
