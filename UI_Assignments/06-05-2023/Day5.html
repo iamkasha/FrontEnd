@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAVA FULL STACK</title>
+    <style>
+      .headers {
+        text-align: center;
+        text-emphasis: none;
+      }
+
+      .image_style {
+        border-radius: 50%;
+      }
+
+      .details {
+        text-align: right;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="headers">My Profile</h1>
+    <img
+      src="/Users/rajkumarkashaicloud.com/Documents/UDAY/Java Script/Assignments/UI_Assignments/06-05-2023/OPT_Uday.png"
+      ,
+      height="250px"
+      ,
+      width="250px"
+      ,
+      class="image_style"
+    />
+    <div class="details">
+      <form>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" />
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" />
+
+        <label for="university">University:</label>
+        <input type="text" id="university" />
+
+        <label for="course">Course:</label>
+        <input type="text" id="course" />
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" />
+
+        <label for="email">Email:</label>
+        <input type="text" id="phone" />
+
+        <label for="visa">Visa Status:</label>
+        <input type="text" id="visa" />
+
+        <input type="submit" onclick="my_Profile()" />
+      </form>
+    </div>
+
+    <div id="display"></div>
+
+    <script>
+      var my_Profile = function () {
+        var firstName = document.getElementById("firstName").value;
+        var lastName = document.getElementById("lastName").value;
+        var university = document.getElementById("university").value;
+        var course = document.getElementById("course").value;
+        var phone = document.getElementById("phone").value;
+        var email = document.getElementById("email").value;
+        var visa = document.getElementById("visa").value;
+
+        var Profile = document.getElementsByClassName("display").value;
+        Profile.innerHTML =
+          "<p><strong>First Name:</strong> " +
+          firstName +
+          "</p>" +
+          "<p><strong>Last Name:</strong> " +
+          lastName +
+          "</p>" +
+          "<p><strong>Universty:</strong> " +
+          university +
+          "</p>" +
+          "<p><strong>Course:</strong> " +
+          course +
+          "</p>" +
+          "<p><strong>Phone Number:</strong> " +
+          phone +
+          "</p>" +
+          "<p><strong>Email:</strong> " +
+          email +
+          "</p>" +
+          "<p><strong>Visa:</strong> " +
+          visa +
+          "</p>";
+      };
+    </script>
+  </body>
+</html>
