@@ -16,8 +16,12 @@
       }
 
       .details {
-        text-align: right;
+        text-align: justify;
         font-style: italic;
+      }
+
+      #display {
+        display: inline;
       }
     </style>
   </head>
@@ -33,36 +37,27 @@
       class="image_style"
     />
     <div class="details">
-      <form>
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" />
+      <p>First Name: <input type="text" id="firstName" /></p>
 
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" />
+      <p>Last Name: <input type="text" id="lastName" /></p>
 
-        <label for="university">University:</label>
-        <input type="text" id="university" />
+      <p>University: <input type="text" id="university" /></p>
 
-        <label for="course">Course:</label>
-        <input type="text" id="course" />
+      <p>Course: <input type="text" id="course" /></p>
 
-        <label for="phone">Phone Number:</label>
-        <input type="text" id="phone" />
+      <p>Phone Number: <input type="text" id="phone" /></p>
 
-        <label for="email">Email:</label>
-        <input type="text" id="phone" />
+      <p>Email: <input type="text" id="email" /></p>
 
-        <label for="visa">Visa Status:</label>
-        <input type="text" id="visa" />
+      <p>Visa Status: <input type="text" id="visa" /></p>
 
-        <input type="submit" onclick="my_Profile()" />
-      </form>
+      <button onclick="my_Profile()">submit</button>
     </div>
 
     <div id="display"></div>
 
     <script>
-      var my_Profile = function () {
+      function my_Profile() {
         var firstName = document.getElementById("firstName").value;
         var lastName = document.getElementById("lastName").value;
         var university = document.getElementById("university").value;
@@ -71,7 +66,7 @@
         var email = document.getElementById("email").value;
         var visa = document.getElementById("visa").value;
 
-        var Profile = document.getElementsByClassName("display").value;
+        var Profile = document.getElementById("display");
         Profile.innerHTML =
           "<p><strong>First Name:</strong> " +
           firstName +
@@ -94,7 +89,7 @@
           "<p><strong>Visa:</strong> " +
           visa +
           "</p>";
-      };
+      }
     </script>
   </body>
 </html>
