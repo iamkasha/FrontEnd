@@ -46,11 +46,11 @@
         <br /><br />
         <label for="gender">Gender:</label>
         <label>
-          <input type="radio" name="gender" id="male" />
+          <input type="radio" name="gender" id="male" value="male" />
           Male
         </label>
         <label>
-          <input type="radio" name="gender" id="female" />
+          <input type="radio" name="gender" id="female" value="female" />
           Female
         </label>
         <label>
@@ -97,43 +97,50 @@
         <input type="date" name="dob" id="dob" />
         <br /><br />
 
-        <input type="submit" value="Submit" />
+        <button onclick="my_Profile(event)" value="submit">submit</button>
       </form>
     </div>
 
     <div id="display"></div>
 
     <script>
-      function my_Profile() {
+      function my_Profile(e) {
+        e.preventDefault();
         var firstName = document.getElementById("firstName").value;
         var lastName = document.getElementById("lastName").value;
-        var gender = document.getElementById("gender").value;
+        var gender = document.querySelector(
+          "input[name='gender']:checked"
+        ).value;
         var email = document.getElementById("email").value;
         var phone = document.getElementById("phone").value;
-        var hobbies = document.getElementById("hobbies").value;
+        var hobbies = Array.from(
+          document.querySelectorAll("input[name='hobbies']:checked")
+        )
+          .map((a) => a.value)
+          .toString();
         var dob = document.getElementById("dob").value;
 
         var Profile = document.getElementById("display");
         Profile.innerHTML =
-          "<p><strong>First Name:</strong> " +
+          "<p><b>First Name:</b> " +
           firstName +
           "</p>" +
-          "<p><strong>Last Name:</strong> " +
+          "<p><b>Last Name:</b> " +
           lastName +
           "</p>" +
-          "<p><strong>Gender:</strong> " +
+          "<p><b>Gender:</b> " +
           gender +
           "</p>" +
-          "<p><strong>Email:</strong> " +
+          "<p><b>Email:</b> " +
           email +
           "</p>" +
-          "<p><strong>Phone Number:</strong> " +
+          "<p><b>Phone Number:</b> " +
           phone +
           "</p>" +
-          "<p><strong>Hobbies:</strong> " +
-          email +
+          "<p><b>Hobbies:</b> " +
+          hobbies +
           "</p>" +
-          "<p><strong>Date of Birth:</strong> " +
+          "<p><b>Date of Birth:</b> " +
           dob +
           "</p>";
       }
