@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAVA FULL STACK</title>
+    <style>
+      .headers {
+        text-align: center;
+        text-emphasis: none;
+      }
+
+      .image_style {
+        border-radius: 50%;
+      }
+
+      .details {
+        text-align: justify;
+        font-style: italic;
+      }
+
+      #display {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="headers">My Profile</h1>
+    <img
+      src="/Users/rajkumarkashaicloud.com/Documents/UDAY/Java Script/Assignments/UI_Assignments/06-06-2023/OPT_Uday.png"
+      ,
+      height="250px"
+      ,
+      width="250px"
+      ,
+      class="image_style"
+    />
+    <div class="details">
+      <form target="_self">
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" id="firstName" />
+        <br /><br />
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" id="lastName" />
+        <br /><br />
+        <label for="gender">Gender:</label>
+        <label>
+          <input type="radio" name="gender" id="male" />
+          Male
+        </label>
+        <label>
+          <input type="radio" name="gender" id="female" />
+          Female
+        </label>
+        <label>
+          <input type="radio" name="gender" id="other" />
+          Other
+        </label>
+        <br /><br />
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" />
+        <br /><br />
+        <label for="phone">Phone Number:</label>
+        <input type="text" name="phone" id="phone" />
+        <br /><br />
+        <label for="hobbies">Hobbies:</label>
+        <label>
+          <input type="checkbox" name="hobbies" id="cricket" value="cricket" />
+          Cricket
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            name="hobbies"
+            id="play station"
+            value="play station"
+          />
+          Play Station
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            name="hobbies"
+            id="badminton"
+            value="badminton"
+          />
+          Badminton
+        </label>
+        <label>
+          <input type="checkbox" name="hobbies" id="movies" value="movies" />
+          Movies
+        </label>
+        <br /><br />
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" name="dob" id="dob" />
+        <br /><br />
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <div id="display"></div>
+
+    <script>
+      function my_Profile() {
+        var firstName = document.getElementById("firstName").value;
+        var lastName = document.getElementById("lastName").value;
+        var gender = document.getElementById("gender").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var hobbies = document.getElementById("hobbies").value;
+        var dob = document.getElementById("dob").value;
+
+        var Profile = document.getElementById("display");
+        Profile.innerHTML =
+          "<p><strong>First Name:</strong> " +
+          firstName +
+          "</p>" +
+          "<p><strong>Last Name:</strong> " +
+          lastName +
+          "</p>" +
+          "<p><strong>Gender:</strong> " +
+          gender +
+          "</p>" +
+          "<p><strong>Email:</strong> " +
+          email +
+          "</p>" +
+          "<p><strong>Phone Number:</strong> " +
+          phone +
+          "</p>" +
+          "<p><strong>Hobbies:</strong> " +
+          email +
+          "</p>" +
+          "<p><strong>Date of Birth:</strong> " +
+          dob +
+          "</p>";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+Assignment : 
+Create a form with your profile information with respective text fields 
+Ex: firstname  , lastname , gender, email , phnno, hobbies(with checkboxes), dob 
+On submit display all the values below the forms
