@@ -1,0 +1,14 @@
+Variable hoisting
+Asynchronous Operations
+setTimeOut()
+Promise object
+JS doesn't supoort OOPs but can achieve it
+Inheritance through 'prototype'
+
+Assignment:
+Create a prototype method 'Customsort' on an array or an object to return the second smallest value
+
+classes in JS
+
+
+
